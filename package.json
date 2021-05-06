@@ -1,5 +1,5 @@
 {
-  "name": "prime-flix",
+  "name": "nextjs-redux-persist-boilerplate",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,8 +8,24 @@
     "start": "next start"
   },
   "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "@zeit/next-less": "^1.0.1",
+    "@zeit/next-sass": "^1.0.1",
+    "bootstrap": "^5.0.0",
     "next": "10.2.0",
+    "next-images": "^1.7.0",
+    "next-redux-wrapper": "^6.0.2",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-redux": "^7.2.4",
+    "redux": "^4.1.0",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-logger": "^3.0.6",
+    "redux-persist": "^6.0.0",
+    "redux-persist-transform-encrypt": "^3.0.1",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "webpack": "^4.46.0"
   }
 }
