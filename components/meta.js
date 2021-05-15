@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import { useRouter } from "next/dist/client/router";
+import { useRouter } from "next/router";
 import { getPageMeta } from "../utils/metaConstants";
 
 export default function Meta() {

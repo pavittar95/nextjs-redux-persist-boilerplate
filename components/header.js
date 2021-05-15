@@ -2,7 +2,7 @@ import React, { useCallback } from "react";
 import Link from "next/link";
 import { useDispatch } from "react-redux";
 import { loginOut } from "../store/user/actions";
-import Head from "next/head";
+import "../styles/Header.module.css";
 import Meta from "./meta";
 
 export default function Header() {
@@ -13,74 +13,22 @@ export default function Header() {
   return (
     <>
       <Meta />
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <div className="container-fluid">
-          <Link href="/">
-            <a className="navbar-brand">Home</a>
-          </Link>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <Link href="/">
-                  <a
-                    className="nav-link active text-capitalize"
-                    aria-current="page"
-                  >
-                    How it works
-                  </a>
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link href="/">
-                  <a className="nav-link text-capitalize" href="#">
-                    For employers
-                  </a>
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link href="/">
-                  <a className="nav-link text-upppercase" href="#">
-                    faq
-                  </a>
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link href="/">
-                  <a className="nav-link text-capitalize" href="#">
-                    i need help now
-                  </a>
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link href="/login">
-                  <a className="nav-link text-capitalize" href="#">
-                    Login
-                  </a>
-                </Link>
-              </li>
-              <li className="nav-item">
-                <button
-                  type="button"
-                  className="btn btn-light"
-                  onClick={logout}
-                >
-                  Logout
-                </button>
-              </li>
-            </ul>
-          </div>
+      <nav>
+        <div className="brand">Brand Name</div>
+        <div className="menu">
+          <ul>
+            <li>
+              <Link href="/services">Services</Link>
+            </li>
+            <li>
+              <Link href="/about-us">About Us</Link>
+            </li>
+            <li>
+              <Link href="/contact-us">Contact Us</Link>
+            </li>
+          </ul>
         </div>
+        <div className="other-action"></div>
       </nav>
     </>
   );
