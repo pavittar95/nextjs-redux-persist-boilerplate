@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import Link from "next/link";
 
 export default function _404() {
-    return (
-        <div>
-            Custom 404
-        </div>
-    )
+  return (
+    <>
+      <h1>404 - Page Not Found</h1>
+      <Link href="/" prefetch>
+        <a>Go back home</a>
+      </Link>
+    </>
+  );
 }

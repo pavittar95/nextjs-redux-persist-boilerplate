@@ -6,7 +6,7 @@ export default function preLoginLayout({ children }) {
   return (
     <>
       <Header />
-      <div className="container-fluid">{children}</div>
+      <div className="container-fluid main-container">{children}</div>
       <Footer />
     </>
   );

@@ -1,13 +1,15 @@
 .header-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     height: 10vh;
     background: white;
-    padding: 1rem;
     box-shadow: 0 4px 13px -3px #0000001a;
     border-bottom: 1px solid #d2d2d2;
-
+    @media (max-width: 767.98px) { 
+        justify-content: space-between;
+        padding: 0 1rem;
+    }
     .menu-button {
         @media (max-width: 767.98px) {
             .btn-primary {
