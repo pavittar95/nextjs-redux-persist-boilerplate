@@ -1,13 +1,13 @@
 import React, { useCallback, useState } from "react";
 import Link from "next/link";
 import { useDispatch } from "react-redux";
-import { List } from "react-bootstrap-icons";
+import { List, X } from "react-bootstrap-icons";
 
 import Meta from "./meta";
-import styles from "../styles/Header.module.scss";
+import "../../styles/Header.module.scss";
 
-import { loginOut } from "../store/user/actions";
-import Sidebar from "./common/sidebar";
+import { loginOut } from "../../store/user/actions";
+import Sidebar from "./sidebar";
 
 export default function Header() {
   const [showSidebar, setshowSidebar] = useState(false);
@@ -19,12 +19,17 @@ export default function Header() {
   const toggleSidebar = useCallback(() => {
     setshowSidebar(!showSidebar);
   }, [showSidebar]);
+
   return (
     <>
       <Meta />
       <div className="position-fixed top-0 start-0 end-0 z-1">
         <nav className="header-container">
-          <div className="brand">Brand Name</div>
+          <div className="brand">
+            <Link href="/">
+              <a className="h4">Brand Name</a>
+            </Link>
+          </div>
           <div className="menu d-none d-md-block d-xl-block">
             <ul type="none" className="d-flex p-0 m-0">
               <li className="px-3">
@@ -58,7 +63,7 @@ export default function Header() {
             </button>
           </div>
         </nav>
-        <Sidebar />
+        <Sidebar active={showSidebar} toggle={toggleSidebar} />
       </div>
     </>
   );
