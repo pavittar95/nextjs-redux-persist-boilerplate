@@ -1,31 +1,42 @@
-.sidebar.open {
-    left: 600px;
-    -webkit-animation: slideOpen 0.5s forwards;
-    -webkit-animation-delay: 0s;
-    animation: slideOpen 0.5s forwards;
-    animation-delay: 0s;
-}
+.sidebar {
+    
+    &.open {
+        left: 600px;
+        -webkit-animation: slideOpen 0.5s forwards;
+        -webkit-animation-delay: 0s;
+        animation: slideOpen 0.5s forwards;
+        animation-delay: 0s;
+    }
 
-.sidebar.close {
-    left: 0px;
-    -webkit-animation: slideClose 0.5s forwards;
-    -webkit-animation-delay: 0s;
-    animation: slideClose 0.5s forwards;
-    animation-delay: 0s;
+    &.close {
+        left: 0px;
+        -webkit-animation: slideClose 0.5s forwards;
+        -webkit-animation-delay: 0s;
+        animation: slideClose 0.5s forwards;
+        animation-delay: 0s;
+    }
 }
 
 @-webkit-keyframes slideOpen {
-    100% { left: 0; }
+    100% {
+        left: 0;
+    }
 }
 
 @keyframes slideOpen {
-    100% { left: 0; }
+    100% {
+        left: 0;
+    }
 }
 
 @-webkit-keyframes slideClose {
-    100% { left: 600px; }
+    100% {
+        left: 600px;
+    }
 }
 
 @keyframes slideClose {
-    100% { left: 600px; }
+    100% {
+        left: 600px;
+    }
 }

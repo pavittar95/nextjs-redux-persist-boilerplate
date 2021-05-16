@@ -7,7 +7,7 @@ import "../../styles/Sidebar.module.scss";
 export default function Sidebar({ active, toggle }) {
   return (
     <div
-      className={Classnames("position-fixed top-0 bottom-0 end-0 z-2 sidebar", {
+      className={Classnames("position-fixed top-0 bottom-0 end-0 z-2 d-md-none d-lg-none sidebar", {
         "close": !active,
         "open": active,
       })}
