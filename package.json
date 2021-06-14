@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "storybook": "start-storybook -p 9009",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
@@ -30,6 +32,11 @@
     "sass": "^1.32.13"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^6.2.9",
+    "@storybook/addon-controls": "^6.2.9",
+    "@storybook/addon-docs": "^6.2.9",
+    "@storybook/addon-viewport": "^6.2.9",
+    "@storybook/react": "^6.2.9",
     "webpack": "^4.46.0"
   }
 }
